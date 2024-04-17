@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.appodeal.mediation": "https://github.com/appodeal/appodeal-unity-plugin-upm.git#v3.2.1",
     "com.google.external-dependency-manager": "file:C:/Users/User/Downloads/com.google.external-dependency-manager-1.2.179.tgz",
     "com.unity.2d.psdimporter": "8.0.4",
     "com.unity.addressables": "1.21.20",
@@ -9,6 +8,7 @@
     "com.unity.ide.visualstudio": "2.0.22",
     "com.unity.ide.vscode": "1.2.5",
     "com.unity.inputsystem": "1.7.0",
+    "com.unity.mobile.android-logcat": "1.4.1",
     "com.unity.purchasing": "4.11.0",
     "com.unity.render-pipelines.universal": "14.0.10",
     "com.unity.test-framework": "1.1.33",

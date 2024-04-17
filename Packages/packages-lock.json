@@ -1,14 +1,5 @@
 {
   "dependencies": {
-    "com.appodeal.mediation": {
-      "version": "https://github.com/appodeal/appodeal-unity-plugin-upm.git#v3.2.1",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {
-        "com.google.external-dependency-manager": "1.2.175"
-      },
-      "hash": "b86d86381f4d3ec418e51e140187eb1e70b0d24d"
-    },
     "com.google.external-dependency-manager": {
       "version": "file:C:/Users/User/Downloads/com.google.external-dependency-manager-1.2.179.tgz",
       "depth": 0,
@@ -143,6 +134,13 @@
     "com.unity.mathematics": {
       "version": "1.2.6",
       "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.mobile.android-logcat": {
+      "version": "1.4.1",
+      "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"

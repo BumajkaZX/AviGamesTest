@@ -1,8 +1,12 @@
 namespace AviGamesTest
 {
+    using Game;
     using Game.Timer;
     using NaughtyAttributes;
-    using Save;
+    using Services.Ad;
+    using Services.Save;
+    using Services.Shop;
+    using UI;
     using UnityEngine;
     using Zenject;
 
@@ -15,13 +19,25 @@ namespace AviGamesTest
 
         [SerializeField]
         private TimerController _timerController;
+
+        [SerializeField]
+        private GameController _gameController;
+
+        [SerializeField]
+        private MockAdView _mockAdView;
         
         public override void InstallBindings()
         {
+            RegisterMockAdView();
+            
+            RegisterShop();
+            RegisterAdManager();
+            
             RegisterInput();
             RegisterClickObserver();
             RegisterSaveManager();
             RegisterTimer();
+            RegisterGame();
         }
 
         private void RegisterInput()
@@ -45,6 +61,26 @@ namespace AviGamesTest
         private void RegisterTimer()
         {
             Container.Bind<ITimer>().FromInstance(_timerController).AsSingle();
+        }
+
+        private void RegisterGame()
+        {
+            Container.BindInterfacesTo<GameController>().FromInstance(_gameController).AsSingle();
+        }
+
+        private void RegisterAdManager()
+        {
+            Container.BindInterfacesTo<AdManager>().AsSingle();
+        }
+
+        private void RegisterShop()
+        {
+            Container.BindInterfacesTo<UnityIAPPurchaser>().AsSingle();
+        }
+
+        private void RegisterMockAdView()
+        {
+            Container.BindInstance(_mockAdView).AsSingle();
         }
     }
 }

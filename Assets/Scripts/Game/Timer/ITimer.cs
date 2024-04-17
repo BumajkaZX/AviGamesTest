@@ -6,5 +6,7 @@ namespace AviGamesTest.Game.Timer
         public event Action OnTimerEnd;
 
         public void StartTimer(float time);
+
+        public void Stop();
     }
 }

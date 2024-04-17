@@ -2,15 +2,16 @@ namespace AviGamesTest
 {
     using Game;
     using UnityEngine;
+    using Zenject;
 
     public class EntryPoint : MonoBehaviour
     {
-        [SerializeField]
-        private GameController _gameController;
+        [Inject]
+        private IGameState _gameState;
 
         private void Awake()
         {
-            _gameController.StartGame();
+            _gameState.StartGame();
         }
     }
 }
